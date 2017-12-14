@@ -130,13 +130,11 @@
 .font-weight-bold {font-weight: bold}
 .font-weight-bolder {font-weight: bolder}
 .font-weight-normal {font-weight: normal}
-.font-size-12 {font-size: 12px}
-.font-size-13 {font-size: 13px}
-.font-size-14 {font-size: 14px}
-.font-size-13 {font-size: 15px}
-.font-size-16 {font-size: 16px}
-.font-size-18 {font-size: 18px}
-.font-size-20 {font-size: 20px}
+.gen-font-size(20);
+.gen-font-size(@n,@i:12) when (@i<=@n){
+    .font-size-@{i} {font-size: (@i)px;}
+    .gen-font-size(@n,(@i+1));
+}
 
 /* 基础布局类样式 */
 .position-absolute {position: absolute}
@@ -152,87 +150,39 @@
 .position-right {right: 0}
 
 /* 基础外距样式 */
-.margin-0 {margin: 0;}
-.margin-0-auto {margin: 0 auto;}
-.margin-auto-0 {margin: auto 0;}
-.margin-left-0 {margin-left: 0;}
-.margin-right-0 {margin-right: 0;}
-.margin-top-0 {margin-top: 0;}
-.margin-bottom-0 {margin-bottom: 0;}
-.margin-5 {margin: 5px;}
-.margin-5-auto {margin: 5px auto;}
-.margin-auto-5 {margin: auto 5px;}
-.margin-left-5 {margin-left: 5px;}
-.margin-right-5 {margin-right: 5px;}
-.margin-top-5 {margin-top: 5px;}
-.margin-bottom-5 {margin-bottom: 5px;}
-.margin-10 {margin: 10px;}
-.margin-10-auto {margin: 10px auto;}
-.margin-auto-10 {margin: auto 10px;}
-.margin-left-10 {margin-left: 10px;}
-.margin-right-10 {margin-right: 10px;}
-.margin-top-10 {margin-top: 10px;}
-.margin-bottom-10 {margin-bottom: 10px;}
-.margin-15 {margin: 15px;}
-.margin-15-auto {margin: 15px auto;}
-.margin-auto-15 {margin: auto 15px;}
-.margin-left-15 {margin-left: 15px;}
-.margin-right-15 {margin-right: 15px;}
-.margin-top-15 {margin-top: 15px;}
-.margin-bottom-15 {margin-bottom: 15px;}
-.margin-20 {margin: 20px;}
-.margin-20-auto {margin: 20px auto;}
-.margin-auto-20 {margin: auto 20px;}
-.margin-left-20 {margin-left: 20px;}
-.margin-right-20 {margin-right: 20px;}
-.margin-top-20 {margin-top: 20px;}
-.margin-bottom-20 {margin-bottom: 20px;}
+.gen-margin(20);
+.gen-margin(@n,@i:0) when (@i<=@n){
+    .margin-@{i} {margin: (@i)px;}
+    .margin-@{i}-auto {margin: (@i)px auto;}
+    .margin-auto-@{i} {margin: auto (@i)px;}
+    .margin-left-@{i} {margin-left: (@i)px;}
+    .margin-right-@{i} {margin-right: (@i)px;}
+    .margin-top-@{i} {margin-top: (@i)px;}
+    .margin-bottom-@{i} {margin-bottom: (@i)px;}
+    .gen-margin(@n,(@i+5));
+}
 
 /* 基础内距样式 */
-.padding-0 {padding: 0;}
-.padding-left-0 {padding-left: 0;}
-.padding-right-0 {padding-right: 0;}
-.padding-top-0 {padding-top: 0;}
-.padding-bottom-0 {padding-bottom: 0;}
-.padding-5 {padding: 5px;}
-.padding-5-auto {padding: 5px 0;}
-.padding-auto-5 {padding: 0 5px;}
-.padding-left-5 {padding-left: 5px;}
-.padding-right-5 {padding-right: 5px;}
-.padding-top-5 {padding-top: 5px;}
-.padding-bottom-5 {padding-bottom: 5px;}
-.padding-10 {padding: 10px;}
-.padding-10-auto {padding: 10px 0;}
-.padding-auto-10 {padding: 0 10px;}
-.padding-left-10 {padding-left: 10px;}
-.padding-right-10 {padding-right: 10px;}
-.padding-top-10 {padding-top: 10px;}
-.padding-bottom-10 {padding-bottom: 10px;}
-.padding-15 {padding: 15px;}
-.padding-15-auto {padding: 15px 0;}
-.padding-auto-15 {padding: 0 15px;}
-.padding-left-15 {padding-left: 15px;}
-.padding-right-15 {padding-right: 15px;}
-.padding-top-15 {padding-top: 15px;}
-.padding-bottom-15 {padding-bottom: 15px;}
-.padding-20 {padding: 20px;}
-.padding-20-auto {padding: 20px 0;}
-.padding-auto-20 {padding: 0 20px;}
-.padding-left-20 {padding-left: 20px;}
-.padding-right-20 {padding-right: 20px;}
-.padding-top-20 {padding-top: 20px;}
-.padding-bottom-20 {padding-bottom: 20px;}
+.gen-padding(20);
+.gen-padding(@n,@i:0) when (@i<=@n){
+    .padding-@{i} {padding: (@i)px;}
+    .padding-@{i}-auto {padding: (@i)px 0;}
+    .padding-auto-@{i} {padding: 0 (@i)px;}
+    .padding-left-@{i} {padding-left: (@i)px;}
+    .padding-right-@{i} {padding-right: (@i)px;}
+    .padding-top-@{i} {padding-top: (@i)px;}
+    .padding-bottom-@{i} {padding-bottom: (@i)px;}
+    .gen-padding(@n,(@i+5));
+}
 
 /* 基础阴影样式 */
-.shadow-3,
-.shadow-hover-3{box-shadow: 0 0 3px rgba(0, 0, 0, .3)}
-.shadow-hover-3:hover {box-shadow: none}
-.shadow-5,
-.shadow-hover-5{box-shadow: 0 0 5px rgba(0, 0, 0, .3)}
-.shadow-hover-5:hover {box-shadow: none}
-.shadow-8,
-.shadow-hover-8{box-shadow: 0 0 5px rgba(0, 0, 0, .3)}
-.shadow-hover-8:hover {box-shadow: none}
+.gen-shadow(10);
+.gen-shadow(@n,@i:3) when (@i<=@n){
+    .shadow-@{i},
+    .shadow-hover-@{i} {box-shadow: 0 0 (@i)px rgba(0, 0, 0, .3)}
+    .shadow-hover-@{i}:hover {box-shadow: none}
+    .gen-shadow(@n,(@i+1));
+}
 
 /* 基础边框样式 */
 .border-none{ border: none;}
@@ -246,11 +196,11 @@
 .border-left-right-solid {border-left-width: 1px; border-left-color:#ccc; border-left-style:solid;
     border-right-width: 1px; border-right-color:#ccc; border-right-style:solid;}
 
-.border-width-1 {border-width: 1px}
-.border-width-2 {border-width: 2px}
-.border-width-3 {border-width: 3px}
-.border-width-4 {border-width: 4px}
-.border-width-5 {border-width: 5px}
+.gen-border-width(5);
+.gen-border-width(@n,@i:1) when (@i<=@n){
+    .border-width-@{i} {border-width: (@i)px;}
+    .gen-border-width(@n,(@i+1));
+}
 
 .border-success{ border-color: #0f7dce}
 .border-error{ border-color: #D23620}
@@ -259,10 +209,13 @@
 .border-active{ border-color: #016839}
 
 /* 基础圆角样式 */
-.border-radius-3{ border-radius:3px; }
-.border-radius-5{ border-radius:5px; }
-.border-radius-8{ border-radius:8px; }
-.border-radius-10{ border-radius:10px; }
+.gen-border-radius(10);
+.gen-border-radius(@n,@i:3) when (@i<=@n){
+    .border-radius-@{i}{
+        border-radius:(@i)px;
+    }
+    .gen-border-radius(@n,(@i+1));
+}
 .border-radius-20{ border-radius:20px; }
 .border-radius-50{ border-radius:50px; }
 .border-radius-999{ border-radius:999px; }
@@ -278,22 +231,22 @@
 .flex-nowrap {flex-wrap: nowrap}
 .flex-wrap {flex-wrap: wrap}
 
-.flex-1 {-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;}
-.flex-2 {-webkit-box-flex: 2;-webkit-flex: 2;flex: 2;}
-.flex-3 {-webkit-box-flex: 3;-webkit-flex: 3;flex: 3;}
-.flex-4 {-webkit-box-flex: 4;-webkit-flex: 4;flex: 4;}
-.flex-5 {-webkit-box-flex: 5;-webkit-flex: 5;flex: 5;}
-.flex-6 {-webkit-box-flex: 6;-webkit-flex: 6;flex: 6;}
-.flex-7 {-webkit-box-flex: 7;-webkit-flex: 7;flex: 7;}
-.flex-8 {-webkit-box-flex: 8;-webkit-flex: 8;flex: 8;}
-.flex-9 {-webkit-box-flex: 9;-webkit-flex: 9;flex: 9;}
+.gen-flexs(9);
+.gen-flexs(@n,@i:1) when (@i<=@n){
+    .flex-@{i}{
+        -webkit-box-flex: @i;
+        -webkit-flex: @i;
+        flex: @i;
+    }
+    .gen-flexs(@n,(@i+1))
+}
 
 /* 基础弹性容器内容水平排列样式 */
-.flex-con-center {justify-content: center;}
-.flex-con-start {justify-content: flex-start;}
-.flex-con-end {justify-content: flex-end;}
-.flex-con-between {justify-content: space-between;}
-.flex-con-around {justify-content: space-around;}
+.flex-con-center {-ms-flex-pack:center;justify-content: center;}
+.flex-con-start {-ms-flex-pack:start; justify-content: flex-start;}
+.flex-con-end {-ms-flex-pack:end; justify-content: flex-end;}
+.flex-con-between {-ms-flex-pack:justify; justify-content: space-between;}
+.flex-con-around {-ms-flex-pack:distribute; justify-content: space-around;}
 
 /* 基础弹性容器内容垂直排列样式 */
 .align-items-center {-ms-flex-align: baseline;-webkit-align-items: center;align-items: center;}
@@ -328,9 +281,12 @@
 }
 
 .ellipsis {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-.ellipsis-1row {display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;}
-.ellipsis-2row {display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;}
-.ellipsis-3row {display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;}
+.gen-ellipsis(3);
+.gen-ellipsis(@n,@i:1) when (@i<=@n){
+    .ellipsis-@{i}row{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: @i;overflow: hidden;
+    }
+    .gen-ellipsis(@n,(@i+1))
+}
 
 
 /* 公共标签样式 */
@@ -342,11 +298,11 @@ html,body {
     font-family: @font-yahei, @font-segoe, @font-helvetica, @font-arial,@font-sans;
 }
 body,html,header,footer,
-h1,h2,h3,h4,h5,h6,span,p,a,i,strong,code,
-ul,ol,li,
+h1,h2,h3,h4,h5,h6,span,p,a,i,strong,code,pre,blockquote,
+ul,ol,li,dl,dt,dd,
 img,video,audio,canvas,svg,
 iframe,div,
-input,button,textarea,form,select,option,
+form,input,button,textarea,form,select,option,
 table,tbody,td,th,thead,tfoot {.margin-0;.padding-0;}
 input,button,textarea,select,option,
 table,tbody,td,th,tr,thead,tfoot {.border-none;outline: none;}
@@ -354,7 +310,7 @@ table,tbody,td,th,tr,thead,tfoot {border-spacing: 0;}
 input,button,textarea,select,option {
     font-family: @font-yahei, @font-segoe, @font-helvetica, @font-arial,@font-sans;}
 ul,li,ol {list-style: none}
-a {text-decoration: none;color: #333;}
+a {text-decoration: none;color: #333; .cursor-pointer;}
 img {display: block}
 
 .container {
@@ -454,22 +410,26 @@ img {display: block}
 }
 
 .listCon.listCon-margin-0>ul>li {.margin-0;}
-.listCon.listCon-margin-left-5>ul>li {.margin-left-5;}
-.listCon.listCon-margin-left-10>ul>li {.margin-left-10;}
-.listCon.listCon-margin-left-15>ul>li {.margin-left-15;}
-.listCon.listCon-margin-left-20>ul>li {.margin-left-20;}
-.listCon.listCon-margin-right-5>ul>li {.margin-right-5;}
-.listCon.listCon-margin-right-10>ul>li {.margin-right-10;}
-.listCon.listCon-margin-right-15>ul>li {.margin-right-15;}
-.listCon.listCon-margin-right-20>ul>li {.margin-right-20;}
-.listCon.listCon-margin-top-5>ul>li {.margin-top-5;}
-.listCon.listCon-margin-top-10>ul>li {.margin-top-10;}
-.listCon.listCon-margin-top-15>ul>li {.margin-top-15;}
-.listCon.listCon-margin-top-20>ul>li {.margin-top-20;}
-.listCon.listCon-margin-bottom-5>ul>li {.margin-bottom-5;}
-.listCon.listCon-margin-bottom-10>ul>li {.margin-bottom-10;}
-.listCon.listCon-margin-bottom-15>ul>li {.margin-bottom-15;}
-.listCon.listCon-margin-bottom-20>ul>li {.margin-bottom-20;}
+.gen-listCon-left-li(20);
+.gen-listCon-left-li(@n,@i:5) when (@i<=@n){
+    .listCon.listCon-margin-left-@{i}>ul>li {.margin-left-(@i);}
+    .gen-listCon-left-li(@n,@i+5);
+}
+.gen-listCon-right-li(20);
+.gen-listCon-right-li(@n,@i:5) when (@i<=@n){
+    .listCon.listCon-margin-right-@{i}>ul>li {.margin-right-(@i);}
+    .gen-listCon-right-li(@n,@i+5);
+}
+.gen-listCon-top-li(20);
+.gen-listCon-top-li(@n,@i:5) when (@i<=@n){
+    .listCon.listCon-margin-top-@{i}>ul>li {.margin-top-(@i);}
+    .gen-listCon-top-li(@n,@i+5);
+}
+.gen-listCon-bottom-li(20);
+.gen-listCon-bottom-li(@n,@i:5) when (@i<=@n){
+    .listCon.listCon-margin-bottom-@{i}>ul>li {.margin-bottom-(@i);}
+    .gen-listCon-bottom-li(@n,@i+5);
+}
 
 .listCon-end-row,
 .listCon-end-1col,
@@ -477,12 +437,12 @@ img {display: block}
 .listCon-end-3col,
 .listCon-end-4col,
 .listCon-end-5col {}
-.listCon.listCon-end-row>ul>li:last-child,
-.listCon.listCon-end-1col>ul>li,
-.listCon.listCon-end-2col>ul>li:nth-child(2n),
-.listCon.listCon-end-3col>ul>li:nth-child(3n),
-.listCon.listCon-end-4col>ul>li:nth-child(4n),
-.listCon.listCon-end-5col>ul>li:nth-child(5n) {.margin-right-0}
+.listCon.listCon-end-row>ul>li:last-child{.margin-right-0}
+.gen-listCon-end-col(5);
+.gen-listCon-end-col(@n,@i:1) when (@i<=@n){
+    .listCon.listCon-end-@{i}col>ul>li:nth-child(((@i)n)) {.margin-right-0}
+    .gen-listCon-end-col(@n,@i+1);
+}
 
 
 /* 文字列表样式 */
