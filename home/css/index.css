@@ -1,0 +1,12 @@
+@charset "utf-8";
+body {
+	font: 100%/1.4 "华文细黑", Tahoma, Georgia, "微软雅黑";
+	background-color: #fafafa;
+	margin: 0;
+	padding: 0;
+	color: #636363;
+}
+p,h1,h2,h3,h4,a,img,div,span,b,li,ul,ol{ padding:0; margin:0;}
+a{ text-decoration:none}
+img{ display:block}
+li,ul,ol{ list-style:none}
