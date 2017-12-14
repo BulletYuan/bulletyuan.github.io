@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta content="chrome=1,ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="webkit" name="renderer">
+    <!--<link href="/favicon.ico" rel="icon">-->
+    <!--<link href="/images/logo.png" rel="apple-touch-icon">-->
+    <title>BNC·前端基础样式库</title>
+
+    <link href="./bnc_base_style.css" rel="stylesheet" type="text/css">
+    <style>
+        p{ line-height: 2em}
+        .summaryCon{ width: 90%; margin: 10px auto;}
+        .content{ padding: 20px 0;}
+        .indexText{ padding: 3px 10px; border-radius: 3px}
+        .title{  padding:10px; border-bottom: 1px #ccc solid;}
+        .scdTitle{  padding:10px; text-indent: 2em;}
+        code{ padding: 2px 5px; background: #ccc; color: #2e2e2e; border-radius: 3px;}
+    </style>
+</head>
+<body>
+
+<div class="position-fixed position-right-bottom
+bg-unactive color-error padding-20 cursor-pointer
+font-size-20 font-weight-bold" style="z-index: 100;" onclick="window.scrollTo(0,0);window.location='#'">顶部</div>
+
+<div class="contentIndex content summaryCon listCon text-listCon listCon-margin-right-10">
+    <h1 class="title margin-10-auto">BNC前端基础样式库-目录</h1>
+    <ul class="flex-con flex-con-start align-items-center flex-wrap">
+        <li><a class="indexText" href="#public_color">公共颜色集</a></li>
+        <li><a class="indexText" href="#public_layout">布局类样式</a></li>
+        <li><a class="indexText" href="#public_tool">工具类样式</a></li>
+        <li><a class="indexText" href="#public_carousel">轮播图类样式</a></li>
+        <!--<li><a class="indexText" href="#public_list">列表类样式</a></li>-->
+        <li><a class="indexText" href="#public_tab">板块tab栏样式</a></li>
+        <li><a class="indexText" href="#public_triangle">三角形样式</a></li>
+    </ul>
+</div>
+
+<div class="public_color content">
+    <a name="public_color"></a>
+    <h1 class="title">公共颜色集</h1>
+    <div class="summaryCon flex-con flex-con-start align-items-center flex-wrap">
+        <p>颜色主题：</p>
+        <p class="margin-right-10"><code>*-success</code></p>
+        <p class="margin-right-10"><code>*-error</code></p>
+        <p class="margin-right-10"><code>*-wait</code></p>
+        <p class="margin-right-10"><code>*-unactive</code></p>
+        <p><code>*-active</code></p>
+    </div>
+    <h2 class="scdTitle">通用背景色：<code>.bg-*</code></h2>
+    <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+        <code class="bg-success margin-right-10">.bg-success</code>
+        <code class="bg-error margin-right-10">.bg-error</code>
+        <code class="bg-wait margin-right-10">.bg-wait</code>
+        <code class="bg-unactive margin-right-10">.bg-unactive</code>
+        <code class="bg-active">.bg-active</code>
+    </div>
+    <h2 class="scdTitle">通用字体色：<code>.color-*</code></h2>
+    <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+        <code class="color-success margin-right-10">.color-success</code>
+        <code class="color-error margin-right-10">.color-error</code>
+        <code class="color-wait margin-right-10">.color-wait</code>
+        <code class="color-unactive margin-right-10">.color-unactive</code>
+        <code class="color-active">.color-active</code>
+    </div>
+</div>
+
+<div class="public_layout content">
+    <a name="public_layout"></a>
+    <h1 class="title">布局类样式</h1>
+    <div class="summaryCon flex-con flex-con-start align-items-stretch flex-wrap">
+        <p>分类：</p>
+        <p class="margin-right-10 margin-bottom-10"><code>position-*</code></p>
+        <p class="margin-right-10 margin-bottom-10"><code>cursor-*</code></p>
+        <p class="margin-right-10 margin-bottom-10"><code>font-*</code></p>
+        <p class="margin-right-10 margin-bottom-10"><code>margin-*</code></p>
+        <p class="margin-right-10 margin-bottom-10"><code>padding-*</code></p>
+        <p class="margin-right-10 margin-bottom-10"><code>shadow-*</code></p>
+        <p class="margin-right-10 margin-bottom-10"><code>border-*</code></p>
+        <p class="margin-right-10 margin-bottom-10"><code>flex-*</code></p>
+        <p class="margin-right-10 margin-bottom-10"><code>flex-con-*</code></p>
+        <p class="margin-right-10 margin-bottom-10"><code>align-items-*</code></p>
+        <p class="margin-right-10 margin-bottom-10"><code>text-*</code></p>
+        <p class=" margin-bottom-10"><code>float-*</code></p>
+    </div>
+    <h2 class="scdTitle">定位：<code>.position-*</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.position-absolute</code></p>
+        <p class="margin-bottom-15">使元素绝对定位在页面内，随页面滚动而滚动，使用top | bottom | left | right来控制元素在页面的位置。可使用<code>z-index</code>属性区分多个绝对定位元素的层级。<br/>若父级容器有<code>position-relative</code>类，则元素绝对定位在父容器内。</p>
+        <p class="margin-bottom-5"><code>.position-fixed</code></p>
+        <p class="margin-bottom-15">使元素固定定位在页面内，不随页面滚动而滚动，使用top | bottom | left | right来控制元素在页面的位置。可使用<code>z-index</code>属性区分多个固定定位元素的层级。</p>
+        <p class="margin-bottom-5"><code>.position-relative</code></p>
+        <p class="margin-bottom-15">使容器内部相对定位。</p>
+        <p class="margin-bottom-5"><code>.position-static</code></p>
+        <p class="margin-bottom-20">使元素静态定位。（元素默认定位）</p>
+        <p class="margin-bottom-5"><code>.position-left-top</code></p>
+        <p class="margin-bottom-15">使拥有<code>position-absolute</code>、<code>position-fixed</code>类的元素定位在页面或父级容器的左上角。</p>
+        <p class="margin-bottom-5"><code>.position-right-top</code></p>
+        <p class="margin-bottom-15">使拥有<code>position-absolute</code>、<code>position-fixed</code>类的元素定位在页面或父级容器的右上角。</p>
+        <p class="margin-bottom-5"><code>.position-left-bottom</code></p>
+        <p class="margin-bottom-15">使拥有<code>position-absolute</code>、<code>position-fixed</code>类的元素定位在页面或父级容器的左下角。</p>
+        <p class="margin-bottom-5"><code>.position-right-bottom</code></p>
+        <p class="margin-bottom-15">使拥有<code>position-absolute</code>、<code>position-fixed</code>类的元素定位在页面或父级容器的右下角。</p>
+        <p class="margin-bottom-5"><code>.position-left</code></p>
+        <p class="margin-bottom-15">使拥有<code>position-absolute</code>、<code>position-fixed</code>类的元素距离页面或父级容器的左侧为0。</p>
+        <p class="margin-bottom-5"><code>.position-right</code></p>
+        <p class="margin-bottom-15">使拥有<code>position-absolute</code>、<code>position-fixed</code>类的元素距离页面或父级容器的右侧为0。</p>
+    </div>
+    <h2 class="scdTitle">指针：<code>.cursor-*</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.cursor-pointer</code></p>
+        <p class="margin-bottom-15 cursor-pointer">使鼠标滑过时为“手柄”样式</p>
+        <p class="margin-bottom-5"><code>.cursor-default</code></p>
+        <p class="margin-bottom-15 cursor-default">使鼠标滑过时为“箭头”样式</p>
+    </div>
+    <h2 class="scdTitle">字体样式：<code>.font-*</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.font-weight-bold/.font-weight-normal</code></p>
+        <p class="margin-bottom-15"><a class="font-weight-bold margin-right-10">文字加粗</a><a class="font-weight-normal">文字正常</a></p>
+        <p class="margin-bottom-5"><code>.font-size-[12|13|14|15|16|18|20]</code></p>
+        <p class="margin-bottom-15">
+            <span class="font-size-12">设</span>
+            <span class="font-size-13">置</span>
+            <span class="font-size-14">文</span>
+            <span class="font-size-15">字</span>
+            <span class="font-size-16">的</span>
+            <span class="font-size-18">尺</span>
+            <span class="font-size-20">寸</span></p>
+    </div>
+    <h2 class="scdTitle">外距：<code>.margin-*</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.margin-[5|10|15|20]</code></p>
+        <p class="margin-bottom-15">容器的外距（上下左右）全部为5 | 10 | 15 | 20。</p>
+        <p class="margin-bottom-5"><code>.margin-auto-[5|10|15|20]</code></p>
+        <p class="margin-bottom-15">容器的外距（左右）全部为5 | 10 | 15 | 20，上下自适应。</p>
+        <p class="margin-bottom-5"><code>.margin-[5|10|15|20]-auto</code></p>
+        <p class="margin-bottom-15">容器的外距（上下）全部为5 | 10 | 15 | 20，左右自适应可居中。</p>
+        <p class="margin-bottom-5"><code>.margin-[top|bottom|left|right]-[5|10|15|20]</code></p>
+        <p class="margin-bottom-15">容器的外距（上|下|左|右）为5 | 10 | 15 | 20。</p>
+    </div>
+    <h2 class="scdTitle">内距：<code>.padding-*</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.padding-[5|10|15|20]</code></p>
+        <p class="margin-bottom-15">容器的内距（上下左右）全部为5 | 10 | 15 | 20。</p>
+        <p class="margin-bottom-5"><code>.padding-auto-[5|10|15|20]</code></p>
+        <p class="margin-bottom-15">容器的内距（左右）全部为5 | 10 | 15 | 20，上下为0。</p>
+        <p class="margin-bottom-5"><code>.padding-[5|10|15|20]-auto</code></p>
+        <p class="margin-bottom-15">容器的内距（上下）全部为5 | 10 | 15 | 20，左右为0。</p>
+        <p class="margin-bottom-5"><code>.padding-[top|bottom|left|right]-[5/10/15/20]</code></p>
+        <p class="margin-bottom-15">容器的内距（上|下|左|右）为5 | 10 | 15 | 20。</p>
+    </div>
+    <h2 class="scdTitle">阴影：<code>.shadow-*</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.shadow-[3|5]</code></p>
+        <p class="margin-bottom-15">元素的阴影，扩散为3px | 5px。<code class="margin-right-10 shadow-3">3px</code><code class="shadow-5">5px</code></p>
+        <p class="margin-bottom-5"><code>.shadow-hover-[3|5]</code></p>
+        <p class="margin-bottom-15">元素的阴影，扩散为3px | 5px，鼠标滑动阴影消失。<code class="margin-right-10 shadow-hover-3">3px</code><code class="shadow-hover-5">5px</code></p>
+    </div>
+    <h2 class="scdTitle">边框：<code>.border-*</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.border-solid</code></p>
+        <p class="margin-bottom-15">元素的边框，默认宽度为1px，样式为实线，颜色为#CCC。<code class="bg-white border-solid">border-solid</code></p>
+        <p class="margin-bottom-5"><code>.border-[top|bottom|top-bottom|left|right|left-right]-solid</code></p>
+        <p class="margin-bottom-15">元素的边框（上|下|上-下|左|右|左-右），默认宽度为1px，样式为实线，颜色为#CCC。
+            <code class="bg-white border-top-solid">border-top-solid</code>
+            <code class="bg-white border-bottom-solid">border-bottom-solid</code>
+            <code class="bg-white border-top-bottom-solid">border-top-bottom-solid</code>
+            <code class="bg-white border-left-solid">border-left-solid</code>
+            <code class="bg-white border-right-solid">border-right-solid</code>
+            <code class="bg-white border-left-right-solid">border-left-right-solid</code>
+        </p>
+        <p class="margin-bottom-5"><code>.border-width-[1|2|3|4|5]</code></p>
+        <p class="margin-bottom-15">元素的边框宽度（1|2|3|4|5）。
+            <code class="bg-white border-solid border-width-1">border-width-1</code>
+            <code class="bg-white border-solid border-width-2">border-width-2</code>
+            <code class="bg-white border-solid border-width-3">border-width-3</code>
+            <code class="bg-white border-solid border-width-4">border-width-4</code>
+            <code class="bg-white border-solid border-width-5">border-width-5</code>
+        </p>
+        <p class="margin-bottom-5"><code>.border-[success|error|wait|unactive|active]</code></p>
+        <p class="margin-bottom-15">通用元素边框颜色主题
+            <code class="border-solid border-success margin-right-10">.border-success</code>
+            <code class="border-solid border-error margin-right-10">.border-error</code>
+            <code class="border-solid border-wait margin-right-10">.border-wait</code>
+            <code class="border-solid border-unactive margin-right-10">.border-unactive</code>
+            <code class="border-solid border-active">.border-active</code>
+        </p>
+    </div>
+    <h2 class="scdTitle">弹性容器：<code>.flex-*</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.flex-con</code></p>
+        <p class="margin-bottom-15">设置容器为弹性容器，子元素内部为弹性排布。</p>
+        <p class="margin-bottom-5"><code>.flex-[row|col|nowrap|wrap]</code></p>
+        <p class="margin-bottom-15">设置弹性容器内部的排列方式：水平排列|垂直排列|不自动换行|自动换行。</p>
+        <p class="margin-bottom-5"><code>.flex-[1|2|3|4|5|6|7|8|9]</code></p>
+        <p class="margin-bottom-5">设置弹性容器内部元素宽度与其他元素的宽度的弹性比例：1|2|3|4|5|6|7|8|9。</p>
+        <ul class="flex-con flex-con-start align-items-start margin-bottom-5" style="width: 100%;">
+            <li class="flex-1 bg-success text-center" style="padding: 10px 0;">flex-1</li>
+            <li class="flex-1 bg-active text-center" style="padding: 10px 0;">flex-1</li>
+        </ul>
+        <ul class="flex-con flex-con-start align-items-start margin-bottom-5" style="width: 100%;">
+            <li class="flex-5 bg-error text-center" style="padding: 10px 0;">flex-5</li>
+            <li class="flex-5 bg-wait text-center" style="padding: 10px 0;">flex-5</li>
+        </ul>
+        <ul class="flex-con flex-con-start align-items-start margin-bottom-5" style="width: 100%;">
+            <li class="flex-1 bg-active text-center" style="padding: 10px 0;">flex-1</li>
+            <li class="flex-2 bg-error text-center" style="padding: 10px 0;">flex-2</li>
+        </ul>
+        <ul class="flex-con flex-con-start align-items-start margin-bottom-5" style="width: 100%;">
+            <li class="flex-1 bg-success text-center" style="padding: 10px 0;">flex-1</li>
+            <li class="flex-9 bg-wait text-center" style="padding: 10px 0;">flex-9</li>
+        </ul>
+        <ul class="flex-con flex-con-start align-items-start margin-bottom-15" style="width: 100%;">
+            <li class="flex-1 bg-success text-center" style="padding: 10px 0;">flex-1</li>
+            <li class="flex-2 bg-active text-center" style="padding: 10px 0;">flex-2</li>
+            <li class="flex-3 bg-wait text-center" style="padding: 10px 0;">flex-3</li>
+            <li class="flex-4 bg-error text-center" style="padding: 10px 0;">flex-4</li>
+            <li class="flex-5 bg-success text-center" style="padding: 10px 0;">flex-5</li>
+            <li class="flex-6 bg-active text-center" style="padding: 10px 0;">flex-6</li>
+            <li class="flex-7 bg-error text-center" style="padding: 10px 0;">flex-7</li>
+            <li class="flex-8 bg-success text-center" style="padding: 10px 0;">flex-8</li>
+            <li class="flex-9 bg-wait text-center" style="padding: 10px 0;">flex-9</li>
+        </ul>
+    </div>
+    <h2 class="scdTitle">弹性设置：<code>.flex-con-*</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.flex-con-[center|start|end|between|around]</code></p>
+        <p class="margin-bottom-15">设置弹性容器内部的水平对齐方式：居中对齐|（开始/左）侧对齐|（结尾/右）侧对齐|两侧对齐|中心对齐。</p>
+        <ul class="flex-con flex-con-center align-items-center margin-bottom-5" style="width: 100%;">
+            <li class="bg-success text-center" style="padding: 10px;">flex-con-center-Item-1</li>
+            <li class="bg-error text-center" style="padding: 10px;">flex-con-center-Item-2</li>
+            <li class="bg-wait text-center" style="padding: 10px;">flex-con-center-Item-3</li>
+        </ul>
+        <ul class="flex-con flex-con-start align-items-center margin-bottom-5" style="width: 100%;">
+            <li class="bg-active text-center" style="padding: 10px;">flex-con-start-Item-1</li>
+            <li class="bg-success text-center" style="padding: 10px;">flex-con-start-Item-2</li>
+            <li class="bg-error text-center" style="padding: 10px;">flex-con-start-Item-3</li>
+        </ul>
+        <ul class="flex-con flex-con-end align-items-center margin-bottom-5" style="width: 100%;">
+            <li class="bg-wait text-center" style="padding: 10px;">flex-con-end-Item-1</li>
+            <li class="bg-error text-center" style="padding: 10px;">flex-con-end-Item-2</li>
+            <li class="bg-active text-center" style="padding: 10px;">flex-con-end-Item-3</li>
+        </ul>
+        <ul class="flex-con flex-con-between align-items-center margin-bottom-5" style="width: 100%;">
+            <li class="bg-success text-center" style="padding: 10px;">flex-con-between-Item-1</li>
+            <li class="bg-active text-center" style="padding: 10px;">flex-con-between-Item-2</li>
+            <li class="bg-error text-center" style="padding: 10px;">flex-con-between-Item-3</li>
+        </ul>
+        <ul class="flex-con flex-con-around align-items-center margin-bottom-15" style="width: 100%;">
+            <li class="bg-active text-center" style="padding: 10px;">flex-con-around-Item-1</li>
+            <li class="bg-wait text-center" style="padding: 10px;">flex-con-around-Item-2</li>
+            <li class="bg-success text-center" style="padding: 10px;">flex-con-around-Item-3</li>
+        </ul>
+    </div>
+    <h2 class="scdTitle">垂直对齐：<code>.align-items-*</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.align-items-[center|start|end|baseline|stretch]</code></p>
+        <p class="margin-bottom-15">设置弹性容器内部的垂直对齐方式：居中对齐|（开始/顶）侧对齐|（结尾/底）侧对齐|字符基准线对齐|伸展对齐。</p>
+        <ul class="flex-con flex-con-center align-items-center margin-bottom-5" style="width: 100%;">
+            <li class="bg-success text-center" style="padding: 10px;">align-items-center-Item-1</li>
+            <li class="bg-error text-center" style="padding: 30px;">align-items-center-Item-2</li>
+            <li class="bg-wait text-center" style="padding: 60px;">align-items-center-Item-3</li>
+        </ul>
+        <ul class="flex-con flex-con-center align-items-start margin-bottom-5" style="width: 100%;">
+            <li class="bg-active text-center" style="padding: 10px;">align-items-start-Item-1</li>
+            <li class="bg-success text-center" style="padding: 30px;">align-items-start-Item-2</li>
+            <li class="bg-error text-center" style="padding: 60px;">align-items-start-Item-3</li>
+        </ul>
+        <ul class="flex-con flex-con-center align-items-end margin-bottom-5" style="width: 100%;">
+            <li class="bg-wait text-center" style="padding: 10px;">align-items-end-Item-1</li>
+            <li class="bg-error text-center" style="padding: 30px;">align-items-end-Item-2</li>
+            <li class="bg-active text-center" style="padding: 60px;">align-items-end-Item-3</li>
+        </ul>
+        <ul class="flex-con flex-con-center align-items-baseline margin-bottom-5" style="width: 100%;">
+            <li class="bg-success text-center" style="padding: 10px;">align-items-baseline-Item-1</li>
+            <li class="bg-active text-center" style="padding: 30px;">align-items-baseline-Item-2</li>
+            <li class="bg-error text-center" style="padding: 60px;">align-items-baseline-Item-3</li>
+        </ul>
+        <ul class="flex-con flex-con-center align-items-stretch margin-bottom-15" style="width: 100%;">
+            <li class="bg-active text-center" style="padding: 10px;">align-items-stretch-Item-1</li>
+            <li class="bg-wait text-center" style="padding: 30px;">align-items-stretch-Item-2</li>
+            <li class="bg-success text-center" style="padding: 60px;">align-items-stretch-Item-3</li>
+        </ul>
+    </div>
+    <h2 class="scdTitle">文本排列：<code>.text-*</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.text-[left|center|right]</code></p>
+        <p class="margin-bottom-15">设置容器内文字的水平对齐方式：左侧对齐|居中对齐|右侧对齐。</p>
+        <p style="width: 200px" class="text-left">text-left</p>
+        <p style="width: 200px" class="text-center">text-center</p>
+        <p style="width: 200px" class="text-right">text-right</p>
+    </div>
+    <h2 class="scdTitle">元素绝对排列：<code>.float-*</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.float-[left|right|inherit]</code></p>
+        <p class="margin-bottom-15">设置元素的绝对水平对齐方式：左侧对齐|右侧对齐|默认对齐。</p>
+        <div style="height: 90px;">
+            <div style="width: 200px; height: 30px;" class="float-left border-solid"><p>float-left</p></div>
+            <div style="width: 200px; height: 30px;" class="float-right border-solid"><p>float-right</p></div>
+            <div style="width: 200px; height: 30px;" class="float-inherit border-solid"><p>float-inherit</p></div>
+        </div>
+    </div>
+</div>
+
+<div class="public_tool content">
+    <a name="public_tool"></a>
+    <h1 class="title">工具类样式</h1>
+    <div class="summaryCon flex-con flex-con-start align-items-center flex-wrap">
+        <p>分类：</p>
+        <p class="margin-right-10"><code>display</code></p>
+        <p class="margin-right-10"><code>opacity</code></p>
+        <p class="margin-right-10"><code>transition</code></p>
+        <p><code>ellipsis</code></p>
+    </div>
+    <h2 class="scdTitle">display：<code class="margin-right-5">.hide</code><code class="margin-right-5">.show</code><code>.flex</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.hide</code></p>
+        <p class="margin-bottom-15">设置浏览器对元素不渲染，且不显示。</p>
+        <p class="margin-bottom-5"><code>.show</code></p>
+        <p class="margin-bottom-15">设置浏览器对元素渲染，且显示。</p>
+        <p class="margin-bottom-5"><code>.flex</code></p>
+        <p class="margin-bottom-15">设置浏览器对容器渲染，且显示，并设置其内部为弹性展示方式。</p>
+    </div>
+    <h2 class="scdTitle">opacity：<code class="margin-right-5">.transparent</code><code>.block</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.transparent</code></p>
+        <p class="margin-bottom-15">设置浏览器对元素渲染，但透明。</p>
+        <p class="margin-bottom-5"><code>.block</code></p>
+        <p class="margin-bottom-15">设置浏览器对元素渲染，不透明。</p>
+    </div>
+    <h2 class="scdTitle">transition：<code>.transition-all</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.transition-all</code></p>
+        <p class="margin-bottom-15">对元素的所有过渡动效均显示，默认过渡时延为0.4秒。</p>
+    </div>
+    <h2 class="scdTitle">ellipsis：<code>.ellipsis-*</code></h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.ellipsis</code></p>
+        <p class="margin-bottom-5">p标签内的内容一旦超过设定宽度，即将超出部分隐藏并用“...”代替显示。</p>
+        <p style="width: 100px" class="ellipsis margin-bottom-15">宽度超过100px的文本即可显示“...”。</p>
+        <p class="margin-bottom-5"><code>.ellipsis-1row</code></p>
+        <p class="margin-bottom-5">容器内的文字内容一旦超过1行，即将超出部分隐藏并用“...”代替显示。（IE下失效）</p>
+        <p style="width: 100px" class="ellipsis-1row margin-bottom-15">宽度超过1行的文本即可显示“...”。</p>
+        <p class="margin-bottom-5"><code>.ellipsis-2row</code></p>
+        <p class="margin-bottom-5">容器内的文字内容一旦超过2行，即将超出部分隐藏并用“...”代替显示。（IE下失效）</p>
+        <p style="width: 100px" class="ellipsis-2row margin-bottom-15">宽度超过2行的文本即可显示“...”。</p>
+        <p class="margin-bottom-5"><code>.ellipsis-3row</code></p>
+        <p class="margin-bottom-5">容器内的文字内容一旦超过3行，即将超出部分隐藏并用“...”代替显示。（IE下失效）</p>
+        <p style="width: 100px" class="ellipsis-3row margin-bottom-15">宽度超过3行的文本即可显示“...”，不信你告。</p>
+    </div>
+</div>
+
+<div class="public_carousel content">
+    <a name="public_carousel"></a>
+    <h1 class="title">轮播图类样式</h1>
+    <div class="summaryCon flex-con flex-con-start align-items-center flex-wrap">
+        <p>分类：</p>
+        <p class="margin-right-10"><code>图片</code></p>
+        <p class="margin-right-10"><code>图片+底部栏+轮播点</code></p>
+        <p class="margin-right-10"><code>图片+底部栏+文字描述+轮播点</code></p>
+        <p class="margin-right-10"><code>图片+左右点击栏</code></p>
+        <p class="margin-right-10"><code>图片+顶部栏+文字描述</code></p>
+        <p><code>图片+顶部栏+文字描述+轮播点</code></p>
+    </div>
+    <h2 class="scdTitle">组件构成：</h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.carouselCon</code></p>
+        <p class="margin-bottom-15">轮播图父容器。</p>
+        <p class="margin-bottom-5"><code>.carouselBanner</code></p>
+        <p class="margin-bottom-15">轮播图片展示区域。</p>
+        <p class="margin-bottom-5"><code>.carouselImgList</code></p>
+        <p class="margin-bottom-15">轮播图片地址列表，默认为透明。</p>
+        <p class="margin-bottom-5"><code>.topBar</code></p>
+        <p class="margin-bottom-15">顶部栏。</p>
+        <p class="margin-bottom-5"><code>.bottomBar</code></p>
+        <p class="margin-bottom-15">底部栏。</p>
+        <p class="margin-bottom-5"><code>.leftBar</code></p>
+        <p class="margin-bottom-15">左侧栏。</p>
+        <p class="margin-bottom-5"><code>.rightBar</code></p>
+        <p class="margin-bottom-15">右侧栏。</p>
+        <p class="margin-bottom-5"><code>.potBar</code></p>
+        <p class="margin-bottom-15">轮播点栏。</p>
+        <p class="margin-bottom-5"><code>.textBar</code></p>
+        <p class="margin-bottom-15">轮播图简介栏。</p>
+    </div>
+    <h2 class="scdTitle">图片：</h2>
+    <div class="summaryCon">
+        <div class="carouselCon margin-5-auto" style="max-width: 400px; height: 200px;">
+            <div class="carouselBanner" style="background-image: url('http://n1image.hjfile.cn/mh/2016/10/10/0032853fce3840b1fe4707a353bd672b.jpg')"></div>
+            <div class="carouselImgList">
+                <ul>
+                    <li>http://n1image.hjfile.cn/mh/2016/10/10/0032853fce3840b1fe4707a353bd672b.jpg</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <h2 class="scdTitle">图片+底部栏+轮播点：</h2>
+    <div class="summaryCon">
+        <div class="carouselCon margin-5-auto" style="max-width: 400px; height: 200px;">
+            <div class="carouselBanner" style="background-image: url('http://n1image.hjfile.cn/mh/2016/10/10/0032853fce3840b1fe4707a353bd672b.jpg')"></div>
+            <div class="carouselImgList">
+                <ul>
+                    <li>http://n1image.hjfile.cn/mh/2016/10/10/0032853fce3840b1fe4707a353bd672b.jpg</li>
+                </ul>
+            </div>
+            <div class="bottomBar">
+                <div class="potBar">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="scdTitle">图片+底部栏+文字描述+轮播点：</h2>
+    <div class="summaryCon">
+        <div class="carouselCon margin-5-auto" style="max-width: 400px; height: 200px;">
+            <div class="carouselBanner" style="background-image: url('http://n1image.hjfile.cn/mh/2016/10/10/0032853fce3840b1fe4707a353bd672b.jpg')"></div>
+            <div class="carouselImgList">
+                <ul>
+                    <li>http://n1image.hjfile.cn/mh/2016/10/10/0032853fce3840b1fe4707a353bd672b.jpg</li>
+                </ul>
+            </div>
+            <div class="bottomBar text-pot">
+                <div class="textBar color-white">With great power comes great responsibility.</div>
+                <div class="potBar">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="scdTitle">图片+左右点击栏：</h2>
+    <div class="summaryCon">
+        <div class="carouselCon margin-5-auto" style="max-width: 400px; height: 200px;">
+            <div class="carouselBanner" style="background-image: url('http://n1image.hjfile.cn/mh/2016/10/10/0032853fce3840b1fe4707a353bd672b.jpg')"></div>
+            <div class="carouselImgList">
+                <ul>
+                    <li>http://n1image.hjfile.cn/mh/2016/10/10/0032853fce3840b1fe4707a353bd672b.jpg</li>
+                </ul>
+            </div>
+            <div class="leftBar font-size-20 cursor-pointer">&lang;</div>
+            <div class="rightBar font-size-20 cursor-pointer">&rang;</div>
+        </div>
+    </div>
+    <h2 class="scdTitle">图片+顶部栏+文字描述：</h2>
+    <div class="summaryCon">
+        <div class="carouselCon margin-5-auto" style="max-width: 400px; height: 200px;">
+            <div class="carouselBanner" style="background-image: url('http://n1image.hjfile.cn/mh/2016/10/10/0032853fce3840b1fe4707a353bd672b.jpg')"></div>
+            <div class="carouselImgList">
+                <ul>
+                    <li>http://n1image.hjfile.cn/mh/2016/10/10/0032853fce3840b1fe4707a353bd672b.jpg</li>
+                </ul>
+            </div>
+            <div class="topBar">
+                <div class="textBar color-white">With great power comes great responsibility.</div>
+            </div>
+        </div>
+    </div>
+    <h2 class="scdTitle">图片+顶部栏+文字描述+轮播点：</h2>
+    <div class="summaryCon">
+        <div class="carouselCon margin-5-auto" style="max-width: 400px; height: 200px;">
+            <div class="carouselBanner" style="background-image: url('http://n1image.hjfile.cn/mh/2016/10/10/0032853fce3840b1fe4707a353bd672b.jpg')"></div>
+            <div class="carouselImgList">
+                <ul>
+                    <li>http://n1image.hjfile.cn/mh/2016/10/10/0032853fce3840b1fe4707a353bd672b.jpg</li>
+                </ul>
+            </div>
+            <div class="topBar text-pot">
+                <div class="textBar color-white">With great power comes great responsibility.</div>
+                <div class="potBar">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="public_tab content">
+    <a name="public_tab"></a>
+    <h1 class="title">板块tab栏样式</h1>
+    <div class="summaryCon flex-con flex-con-start align-items-center flex-wrap">
+        <p>分类：</p>
+        <p class="margin-right-10"><code>下标有划线</code></p>
+        <p class="margin-right-10"><code>下标无划线</code></p>
+        <p><code>带刷新箭头</code></p>
+    </div>
+    <h2 class="scdTitle">组件构成：</h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.titleTabBar</code></p>
+        <p class="margin-bottom-15">板块tab栏父容器。</p>
+        <p class="margin-bottom-5"><code>.tabBar</code></p>
+        <p class="margin-bottom-15">板块tab栏tab切换栏区域。</p>
+        <p class="margin-bottom-5"><code>.refreshBtn</code></p>
+        <p class="margin-bottom-5">板块tab栏刷新按钮。</p>
+    </div>
+    <h2 class="scdTitle">下标有划线：</h2>
+    <div class="summaryCon">
+        <div class="titleTabBar position-relative margin-bottom-15" style="max-width: 400px">
+            <div class="tabBar underline text-left font-size-18">
+                <p><a class="margin-right-20 active">Tab1</a>
+                    <a class="margin-right-20">Tab2</a>
+                    <a class="margin-right-20">Tab3</a>
+                    <a>Tab4</a></p>
+            </div>
+            <div class="refreshBtn color-light-gray"><p><a>more>></a></p></div>
+        </div>
+    </div>
+    <h2 class="scdTitle">下标无划线：</h2>
+    <div class="summaryCon">
+        <div class="titleTabBar position-relative margin-bottom-15" style="max-width: 400px">
+            <div class="tabBar text-left font-size-18">
+                <p><a class="margin-right-20 active">Tab1</a>
+                    <a class="margin-right-20">Tab2</a>
+                    <a class="margin-right-20">Tab3</a>
+                    <a>Tab4</a></p>
+            </div>
+            <div class="refreshBtn color-light-gray"><p><a>more>></a></p></div>
+        </div>
+    </div>
+    <h2 class="scdTitle">带刷新箭头：</h2>
+    <div class="summaryCon">
+        <div class="titleTabBar position-relative margin-bottom-15" style="max-width: 400px">
+            <div class="tabBar underline text-left font-size-18">
+                <p><a class="margin-right-20 active">Tab1</a>
+                    <a class="margin-right-20">Tab2</a>
+                    <a class="margin-right-20">Tab3</a>
+                    <a>Tab4</a></p>
+            </div>
+            <div class="refreshBtn color-light-gray"><p><span class="refresh-mark"></span><a>refresh</a></p></div>
+        </div>
+    </div>
+</div>
+
+<div class="public_triangle content">
+    <a name="public_triangle"></a>
+    <h1 class="title">三角形样式</h1>
+    <div class="summaryCon flex-con flex-con-start align-items-center flex-wrap">
+        <p>分类：</p>
+        <p class="margin-right-10"><code>锐角三角形</code></p>
+        <p><code>直角三角形</code></p>
+    </div>
+    <h2 class="scdTitle">组件构成：</h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.triangle</code></p>
+        <p class="margin-bottom-15">三角形元素父级类。</p>
+    </div>
+    <h2 class="scdTitle">锐角三角形：</h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.triangle-up</code></p>
+        <p class="margin-bottom-15">箭头向上的三角形。</p>
+        <p class="triangle triangle-up bg-success"></p>
+        <p class="margin-bottom-5"><code>.triangle-down</code></p>
+        <p class="margin-bottom-15">箭头向下的三角形。</p>
+        <p class="triangle triangle-down bg-wait"></p>
+        <p class="margin-bottom-5"><code>.triangle-left</code></p>
+        <p class="margin-bottom-5">箭头向左的三角形。</p>
+        <p class="triangle triangle-left bg-active"></p>
+        <p class="margin-bottom-5"><code>.triangle-right</code></p>
+        <p class="margin-bottom-5">箭头向右的三角形。</p>
+        <p class="triangle triangle-right bg-error"></p>
+    </div>
+    <h2 class="scdTitle">直角三角形：</h2>
+    <div class="summaryCon">
+        <p class="margin-bottom-5"><code>.triangle-top-left</code></p>
+        <p class="margin-bottom-15">左上角三角形。</p>
+        <p class="triangle triangle-top-left bg-active"></p>
+        <p class="margin-bottom-5"><code>.triangle-top-right</code></p>
+        <p class="margin-bottom-15">右上角三角形。</p>
+        <p class="triangle triangle-top-right bg-error"></p>
+        <p class="margin-bottom-5"><code>.triangle-bottom-left</code></p>
+        <p class="margin-bottom-5">左下角三角形。</p>
+        <p class="triangle triangle-bottom-left bg-wait"></p>
+        <p class="margin-bottom-5"><code>.triangle-bottom-right</code></p>
+        <p class="margin-bottom-5">右下角三角形。</p>
+        <p class="triangle triangle-bottom-right bg-success"></p>
+    </div>
+</div>
+
+</body>
+</html>
