@@ -1,0 +1,81 @@
+
+/* 轮播图类样式 */
+
+.carouselCon {width: 100%;height: 100%;.position-relative;}
+.carouselCon>.carouselBanner {
+    width: 100%;
+    height: 100%;
+    .bg-img-center-cover;
+}
+.carouselCon>.carouselImgList {.transparent;}
+.carouselCon>.topBar {
+    width: 100%;
+    height: auto;
+    .position-absolute;
+    .position-left-top;
+    background-color: rgba(0, 0, 0, .5);
+}
+.carouselCon>.bottomBar {
+    width: 100%;
+    height: auto;
+    .position-absolute;
+    .position-left-bottom;
+    background-color: rgba(0, 0, 0, .5);
+}
+.carouselCon>.leftBar {
+    width: auto;
+    height: 100%;
+    .position-absolute;
+    .position-left-top;
+}
+.carouselCon>.rightBar {
+    width: auto;
+    height: 100%;
+    .position-absolute;
+    .position-right-top;
+}
+.carouselCon .textBar,
+.carouselCon .potBar {width: 100%;.padding-15-auto;}
+.carouselCon .potBar>ul {
+    width: 100%;
+    .flex-con;
+    .flex-con-center;
+    .align-items-center;
+}
+.carouselCon .potBar>ul>li {
+    width: 8px;
+    height: 8px;
+    .margin-right-10;
+    background: #fafafa;
+    .cursor-pointer;
+    .border-solid;
+    .border-radius-50;
+
+    &:last-child {.margin-right-0;}
+    &:hover,
+    &.active{width: 10px;height: 10px;background: #fff;}
+}
+.carouselCon .textBar {.text-center;}
+.carouselCon>.topBar.text-pot,
+.carouselCon>.bottomBar.text-pot {
+    .flex-con;
+    .flex-con-between;
+    .align-items-center;
+}
+.carouselCon>.topBar.text-pot .potBar,
+.carouselCon>.bottomBar.text-pot .potBar,
+.carouselCon>.topBar.text-pot .textBar,
+.carouselCon>.bottomBar.text-pot .textBar {width: auto;}
+.carouselCon>.topBar.text-pot .potBar,
+.carouselCon>.bottomBar.text-pot .potBar {.margin-right-20}
+.carouselCon>.topBar.text-pot .textBar,
+.carouselCon>.bottomBar.text-pot .textBar {.margin-right-20;.text-left;}
+.carouselCon>.leftBar,
+.carouselCon>.rightBar {
+    .flex-con;
+    .flex-con-center;
+    .align-items-center;
+    .padding-auto-15;
+}
+.carouselCon>.leftBar img,
+.carouselCon>.rightBar img {height: 20px;}

@@ -1,0 +1,23 @@
+
+/* 板块tab栏样式 */
+
+.titleTabBar>.tabBar>p>a {.cursor-pointer;.padding-5-auto;}
+.titleTabBar>.tabBar.underline>p>a.active {
+    .bg-img-bottom-auto;
+    background-image: url(@underline);
+}
+.titleTabBar>.tabBar>p>a.active {color: @success-color;.font-weight-bold;}
+.titleTabBar>.refreshBtn {
+    .position-absolute;
+    z-index: 5;
+    bottom: 5px;
+    right: 0;
+    .cursor-pointer;
+    .font-size-12;
+}
+.titleTabBar>.refreshBtn .refresh-mark {
+    padding-left: 12px;
+    margin-right: 5px;
+    .bg-img-left-contain;
+    background-image: url(@refresh);
+}

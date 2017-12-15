@@ -1,0 +1,130 @@
+
+/* 三角形样式 */
+.triangle{width: 0;height: 0;}
+.triangle.bg-success,
+.triangle.bg-error,
+.triangle.bg-warn,
+.triangle.bg-unactive,
+.triangle.bg-active{ background-color: transparent}
+
+/* 锐角三角形样式 */
+
+.triangle-up {
+    border-left-width: 10px;
+    border-left-color: transparent;
+    border-left-style: solid;
+    border-right-width: 10px;
+    border-right-color: transparent;
+    border-right-style: solid;
+    border-bottom-width: 20px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+
+    &.bg-success{border-bottom-color:@success-color;}
+    &.bg-error{border-bottom-color:@error-color;}
+    &.bg-warn{border-bottom-color:@warn-color;}
+    &.bg-unactive{border-bottom-color:@unactive-color;}
+    &.bg-active{border-bottom-color:@active-color;}
+}
+.triangle-down {
+    border-left-width: 10px;
+    border-left-color: transparent;
+    border-left-style: solid;
+    border-right-width: 10px;
+    border-right-color: transparent;
+    border-right-style: solid;
+    border-top-width: 20px;
+    border-top-color: white;
+    border-top-style: solid;
+    
+    &.bg-success{border-top-color:@success-color;}
+    &.bg-error{border-top-color:@error-color;}
+    &.bg-warn{border-top-color:@warn-color;}
+    &.bg-unactive{border-top-color:@unactive-color;}
+    &.bg-active{border-top-color:@active-color;}
+}
+.triangle-left {
+    border-right-width: 20px;
+    border-right-color: white;
+    border-right-style: solid;
+    border-bottom-width: 10px;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-top-width: 10px;
+    border-top-color: transparent;
+    border-top-style: solid;
+    
+    &.bg-success{border-right-color:@success-color;}
+    &.bg-error{border-right-color:@error-color;}
+    &.bg-warn{border-right-color:@warn-color;}
+    &.bg-unactive{border-right-color:@unactive-color;}
+    &.bg-active{border-right-color:@active-color;}
+}
+.triangle-right {
+    border-left-width: 20px;
+    border-left-color: white;
+    border-left-style: solid;
+    border-bottom-width: 10px;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-top-width: 10px;
+    border-top-color: transparent;
+    border-top-style: solid;
+
+    &.bg-success{border-left-color:@success-color;}
+    &.bg-error{border-left-color:@error-color;}
+    &.bg-warn{border-left-color:@warn-color;}
+    &.bg-unactive{border-left-color:@unactive-color;}
+    &.bg-active{border-left-color:@active-color;}
+}
+
+/* 直角三角形样式 */
+
+.triangle-top-left {
+    border-right-width: 20px;
+    border-right-color: transparent;
+    border-right-style: solid;
+    border-top-width: 20px;
+    border-top-color: white;
+    border-top-style: solid;
+}
+.triangle-top-right {
+    border-left-width: 20px;
+    border-left-color: transparent;
+    border-left-style: solid;
+    border-top-width: 20px;
+    border-top-color: white;
+    border-top-style: solid;
+}
+.triangle-top-left,
+.triangle-top-right{
+    &.bg-success{border-top-color:@success-color;}
+    &.bg-error{border-top-color:@error-color;}
+    &.bg-warn{border-top-color:@warn-color;}
+    &.bg-unactive{border-top-color:@unactive-color;}
+    &.bg-active{border-top-color:@active-color;}
+}
+.triangle-bottom-left {
+    border-right-width: 20px;
+    border-right-color: transparent;
+    border-right-style: solid;
+    border-bottom-width: 20px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+}
+.triangle-bottom-right {
+    border-left-width: 20px;
+    border-left-color: transparent;
+    border-left-style: solid;
+    border-bottom-width: 20px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+}
+.triangle-bottom-left,
+.triangle-bottom-right{
+    &.bg-success{border-bottom-color:@success-color;}
+    &.bg-error{border-bottom-color:@error-color;}
+    &.bg-warn{border-bottom-color:@warn-color;}
+    &.bg-unactive{border-bottom-color:@unactive-color;}
+    &.bg-active{border-bottom-color:@active-color;}
+}

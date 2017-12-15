@@ -1,0 +1,116 @@
+
+/* 列表类样式 */
+
+.listCon {
+    width: auto;
+    height: auto;
+    background-color: #fff;
+}
+
+.listCon.listCon-margin-0>ul>li {.margin-0;}
+.gen-listCon-left-li(20);
+.gen-listCon-left-li(@n,@i:5) when (@i<=@n){
+    .listCon.listCon-margin-left-@{i}>ul>li {margin-left:(@i)px;}
+    .gen-listCon-left-li(@n,@i+5);
+}
+.gen-listCon-right-li(20);
+.gen-listCon-right-li(@n,@i:5) when (@i<=@n){
+    .listCon.listCon-margin-right-@{i}>ul>li {margin-right:(@i)px;}
+    .gen-listCon-right-li(@n,@i+5);
+}
+.gen-listCon-top-li(20);
+.gen-listCon-top-li(@n,@i:5) when (@i<=@n){
+    .listCon.listCon-margin-top-@{i}>ul>li {margin-top:(@i)px;}
+    .gen-listCon-top-li(@n,@i+5);
+}
+.gen-listCon-bottom-li(20);
+.gen-listCon-bottom-li(@n,@i:5) when (@i<=@n){
+    .listCon.listCon-margin-bottom-@{i}>ul>li {margin-bottom:(@i)px;}
+    .gen-listCon-bottom-li(@n,@i+5);
+}
+
+.listCon-end-row,
+.listCon-end-1col,
+.listCon-end-2col,
+.listCon-end-3col,
+.listCon-end-4col,
+.listCon-end-5col {}
+.listCon.listCon-end-row>ul>li:last-child{.margin-right-0}
+.gen-listCon-end-col(5);
+.gen-listCon-end-col(@n,@i:1) when (@i<=@n){
+    .listCon.listCon-end-@{i}col>ul>li:nth-child(@{i}n) {.margin-right-0;}
+    .gen-listCon-end-col(@n,@i+1);
+}
+
+
+/* 文字列表样式 */
+
+.listCon.text-listCon {}
+.listCon.text-listCon>ul>li .text-list-titleText {.margin-bottom-10}
+.listCon.text-listCon>ul>li .text-list-textBorder {.border-solid}
+.listCon.text-listCon>ul>li .text-list-circleText {.margin-right-5}
+.listCon.text-listCon>ul>li .text-list-circleText:before {content: '●'}
+.listCon.text-listCon>ul>li .text-list-rectText {.margin-right-5}
+.listCon.text-listCon>ul>li .text-list-rectText:before {content: '■'}
+.listCon.text-listCon>ul>li .text-list-orderText {
+    padding: 2px 5px;
+    background-color: #aaa;
+    color: #fff;
+}
+
+/* 图片列表样式 */
+
+.listCon.img-listCon {}
+.listCon.img-listCon>ul>li {position: relative;}
+.listCon.img-listCon>ul>li .img-list-banner {
+    width: 100%;
+    height: 100%;
+    .bg-img-center-cover;
+}
+.listCon.img-listCon>ul>li .img-list-mark {
+    .position-absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 1;
+}
+.listCon.img-listCon>ul>li .img-list-mark>img {
+    width: 50px;
+    height: 50px;
+}
+.listCon.img-listCon>ul>li .img-list-bottomBar {
+    width: 100%;
+    .padding-10-auto;
+    background-color: rgba(0, 0, 0, .5);
+    .position-absolute;
+    .position-left-bottom;
+    z-index: 1;
+    .flex-con;
+    .flex-con-center;
+    .align-items-center;
+}
+.listCon.img-listCon>ul>li .img-list-bottomBar.img-list-bottomBar-text-button {.flex-con-between;}
+.listCon.img-listCon>ul>li .img-list-bottomBar .img-list-bottomBar-text {color: #fff;}
+.listCon.img-listCon>ul>li .img-list-bottomBar .img-list-bottomBar-button {
+    color: #fff;
+    background-color: #F19500;
+    padding: 2px 10px;
+    border: 1px #F19500 solid;
+    .border-radius-3;
+    .cursor-pointer;
+}
+.listCon.img-listCon>ul>li .img-list-bottomBar.img-list-bottomBar-text-button .img-list-bottomBar-text {.margin-left-10;}
+.listCon.img-listCon>ul>li .img-list-bottomBar.img-list-bottomBar-text-button .img-list-bottomBar-button {.margin-right-10;}
+
+/* 图文混合列表样式 */
+
+.listCon.text-img-listCon {}
+.listCon.text-img-listCon.hor-center-listCon {
+    .flex-con;
+    .flex-con-start;
+    .align-items-center;
+}
+.listCon.text-img-listCon.hor-top-listCon {
+    .flex-con;
+    .flex-con-start;
+    .align-items-start;
+}
