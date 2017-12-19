@@ -1,0 +1,10 @@
+.switch{
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .bg-img-center-auto;
+    background-image: url(@unswitch);
+
+    & *,&{ .cursor-pointer;}
+    &.switched{background-image: url(@switch);}
+}

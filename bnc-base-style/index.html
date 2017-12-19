@@ -13,6 +13,7 @@
 
     <link href="bnc_base_style.less" rel="stylesheet/less" type="text/css">
     <script src="less-2.7.2.min.js" type="text/javascript"></script>
+    <script src="zepto-1.2.0.min.js" type="text/javascript"></script>
     <style>
         p {
             line-height: 2em
@@ -63,6 +64,12 @@ font-size-20 font-weight-bold" style="z-index: 100;" onclick="window.scrollTo(0,
             <li><a class="indexText" href="#public_color">公共颜色集</a></li>
             <li><a class="indexText" href="#public_layout">布局类样式</a></li>
             <li><a class="indexText" href="#public_tool">工具类样式</a></li>
+            <li><a class="indexText" href="#public_button">按钮类样式</a></li>
+            <li><a class="indexText" href="#public_input">输入框类样式</a></li>
+            <li><a class="indexText" href="#public_selector">下拉框类样式</a></li>
+            <li><a class="indexText" href="#public_radio">单选按钮类样式</a></li>
+            <li><a class="indexText" href="#public_checkbox">多选按钮类样式</a></li>
+            <li><a class="indexText" href="#public_switch">开关切换类样式</a></li>
             <li><a class="indexText" href="#public_carousel">轮播图类样式</a></li>
             <!--<li><a class="indexText" href="#public_list">列表类样式</a></li>-->
             <li><a class="indexText" href="#public_tab">板块tab栏样式</a></li>
@@ -388,6 +395,350 @@ font-size-20 font-weight-bold" style="z-index: 100;" onclick="window.scrollTo(0,
             <p class="margin-bottom-5">容器内的文字内容一旦超过3行，即将超出部分隐藏并用“...”代替显示。（IE下失效）</p>
             <p style="width: 100px" class="ellipsis-3row margin-bottom-15">宽度超过3行的文本即可显示“...”，不信你告。</p>
         </div>
+    </div>
+
+    <div class="public_button content">
+        <a name="public_button"></a>
+        <h1 class="title">按钮类样式</h1>
+        <div class="summaryCon flex-con flex-con-start align-items-center flex-wrap">
+            <p>分类：</p>
+            <p class="margin-right-10"><code>按钮</code></p>
+            <p><code>空心按钮</code></p>
+        </div>
+        <h2 class="scdTitle">按钮：<code>.btn .btn-s .border-radius-[3|5|8|10|20|50|999]</code></h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <a class="btn btn-success margin-right-10">默认按钮</a>
+            <a class="btn btn-s border-radius-3 btn-warn margin-right-10">小按钮</a>
+            <a class="btn btn-m border-radius-3 btn-error margin-right-10">中按钮</a>
+            <a class="btn btn-l border-radius-3 btn-active margin-right-10">大按钮</a>
+            <a class="btn btn-l border-radius-999 btn-unactive">大按钮</a>
+        </div>
+        <h2 class="scdTitle">空心按钮：<code>.btn-line | .border-solid</code></h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <a class="btn btn-line btn-success margin-right-10">默认按钮</a>
+            <a class="btn btn-s btn-line border-radius-3 btn-warn margin-right-10">小按钮</a>
+            <a class="btn btn-m btn-line border-radius-3 btn-error margin-right-10">中按钮</a>
+            <a class="btn btn-l btn-line border-radius-3 btn-active margin-right-10">大按钮</a>
+            <a class="btn btn-l btn-line border-radius-999 btn-unactive">大按钮</a>
+        </div>
+    </div>
+
+    <div class="public_input content">
+        <a name="public_input"></a>
+        <h1 class="title">输入框类样式</h1>
+        <div class="summaryCon flex-con flex-con-start align-items-center flex-wrap"></div>
+        <h2 class="scdTitle">输入框：<code>.input</code></h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <div class="input margin-right-10 margin-bottom-10">
+                <input type="text" placeholder="请输入相关内容" />
+                <div class="img"></div>
+            </div>
+            <div class="input active margin-right-10 margin-bottom-10">
+                <input type="text" placeholder="请输入相关内容" />
+                <div class="img"></div>
+            </div>
+            <div class="input unactive margin-right-10 margin-bottom-10">
+                <input type="text" placeholder="请输入相关内容" />
+                <div class="img"></div>
+            </div>
+            <div class="input warn margin-right-10 margin-bottom-10">
+                <input type="text" placeholder="请输入相关内容" />
+                <div class="img"></div>
+            </div>
+            <div class="input error margin-right-10 margin-bottom-10">
+                <input type="text" placeholder="请输入相关内容" />
+                <div class="img"></div>
+            </div>
+            <div class="input success margin-bottom-10">
+                <input type="text" placeholder="请输入相关内容" />
+                <div class="img"></div>
+            </div>
+        </div>
+        <h2 class="scdTitle">输入框HTML实现：</h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <textarea class="border-solid border-radius-3 padding-10" style="width: 650px; height: 350px">
+                <div class="input">
+                    <input type="text" placeholder="请输入相关内容" />
+                    <div class="img"></div>
+                </div>
+            </textarea>
+        </div>
+    </div>
+
+    <div class="public_selector content">
+        <a name="public_selector"></a>
+        <h1 class="title">下拉框类样式</h1>
+        <div class="summaryCon flex-con flex-con-start align-items-center flex-wrap"></div>
+        <h2 class="scdTitle">下拉框：<code>.selector</code></h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <div class="selector margin-right-10 margin-bottom-10">
+                <input type="text" readonly placeholder="请选择..." />
+                <div class="arrow"><div class="arrow-down"></div><div class="arrow-up"></div> </div>
+                <div class="downCon">
+                    <ul>
+                        <li>普通内容</li>
+                        <li class="unactive">不可选内容</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="selector active margin-right-10 margin-bottom-10">
+                <input type="text" readonly placeholder="请选择..." />
+                <div class="arrow"><div class="arrow-down"></div><div class="arrow-up"></div> </div>
+                <div class="downCon">
+                    <ul>
+                        <li>普通内容</li>
+                        <li class="unactive">不可选内容</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="selector warn margin-right-10 margin-bottom-10">
+                <input type="text" readonly placeholder="请选择..." />
+                <div class="arrow"><div class="arrow-down"></div><div class="arrow-up"></div> </div>
+                <div class="downCon">
+                    <ul>
+                        <li>普通内容</li>
+                        <li class="unactive">不可选内容</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="selector error margin-right-10 margin-bottom-10">
+                <input type="text" readonly placeholder="请选择..." />
+                <div class="arrow"><div class="arrow-down"></div><div class="arrow-up"></div> </div>
+                <div class="downCon">
+                    <ul>
+                        <li>普通内容</li>
+                        <li class="unactive">不可选内容</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="selector success margin-right-10 margin-bottom-10">
+                <input type="text" readonly placeholder="请选择..." />
+                <div class="arrow"><div class="arrow-down"></div><div class="arrow-up"></div> </div>
+                <div class="downCon">
+                    <ul>
+                        <li>普通内容</li>
+                        <li class="unactive">不可选内容</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="selector unactive margin-right-10 margin-bottom-10">
+                <input type="text" readonly placeholder="请选择..." />
+                <div class="arrow"><div class="arrow-down"></div><div class="arrow-up"></div> </div>
+                <div class="downCon">
+                    <ul>
+                        <li>普通内容</li>
+                        <li class="unactive">不可选内容</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h2 class="scdTitle">下拉框HTML实现：</h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <textarea class="border-solid border-radius-3 padding-10" style="width: 650px; height: 350px">
+                <div class="selector">
+                    <input type="text" readonly placeholder="请选择..." />
+                    <div class="arrow"><div class="arrow-down"></div><div class="arrow-up"></div> </div>
+                    <div class="downCon">
+                        <ul>
+                            <li>普通内容</li>
+                            <li class="unactive">不可选内容</li>
+                        </ul>
+                    </div>
+                </div>
+            </textarea>
+        </div>
+        <h2 class="scdTitle">下拉框Zepto-JS交互实现：</h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <textarea class="border-solid border-radius-3 padding-10" style="width: 650px; height: 350px">
+                $('.selector').unbind().on('click',function(){
+                if($(this).attr('class').indexOf('unactive')<0){
+                    $(this).find('.downCon').css('top',($(this).outerHeight-2)+"px");
+                    if($(this).find('.downCon').css('display')==='none'){
+                        $(this).find('.downCon').css('display','block');
+                        $(this).find('.arrow-down').css('display','none');
+                        $(this).find('.arrow-up').css('display','block');
+                    }else{
+                        $(this).find('.downCon').css('display','none');
+                        $(this).find('.arrow-down').css('display','block');
+                        $(this).find('.arrow-up').css('display','none');
+                    }
+                    var _that=$(this);
+                    $(this).find('.downCon li').unbind().on('click',function(){
+                        if($(this).attr('class')&&$(this).attr('class').indexOf('unactive')>=0) {
+                        }else{
+                            _that.find("input").val($(this).text());
+                        }
+                    });
+                }
+            });
+            </textarea>
+        </div>
+        <script>
+            $('.selector').unbind().on('click',function(){
+                if($(this).attr('class').indexOf('unactive')<0){
+                    $(this).find('.downCon').css('top',($(this).outerHeight-2)+"px");
+                    if($(this).find('.downCon').css('display')==='none'){
+                        $(this).find('.downCon').css('display','block');
+                        $(this).find('.arrow-down').css('display','none');
+                        $(this).find('.arrow-up').css('display','block');
+                    }else{
+                        $(this).find('.downCon').css('display','none');
+                        $(this).find('.arrow-down').css('display','block');
+                        $(this).find('.arrow-up').css('display','none');
+                    }
+                    var _that=$(this);
+                    $(this).find('.downCon li').unbind().on('click',function(){
+                        if($(this).attr('class')&&$(this).attr('class').indexOf('unactive')>=0) {
+                        }else{
+                            _that.find("input").val($(this).text());
+                        }
+                    });
+                }
+            });
+        </script>
+    </div>
+
+    <div class="public_radio content">
+        <a name="public_radio"></a>
+        <h1 class="title">单选按钮类样式</h1>
+        <div class="summaryCon flex-con flex-con-start align-items-center flex-wrap"></div>
+        <h2 class="scdTitle">单选按钮：<code>.radio</code></h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <div class="radio margin-right-10 margin-bottom-10"><p>单选选项</p></div>
+            <div class="radio choice margin-right-10 margin-bottom-10" data-state="1"><p>单选选项-选中</p></div>
+            <div class="radio unactive margin-right-10 margin-bottom-10"><p>不可选单选选项</p></div>
+        </div>
+        <h2 class="scdTitle">单选按钮HTML实现：</h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <textarea class="border-solid border-radius-3 padding-10" style="width: 650px; height: 350px">
+                <div class="radio"><p>单选选项</p></div>
+            </textarea>
+        </div>
+        <h2 class="scdTitle">单选按钮Zepto-JS交互实现：</h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <textarea class="border-solid border-radius-3 padding-10" style="width: 650px; height: 350px">
+            $('.radio').unbind().on('click',function(){
+                if($(this).attr('class').indexOf('unactive')<0){
+                    if(!$(this).data('state'))  $(this).data('state',0);
+                    if($(this).data('state')<1){
+                        $(this).data('state',1);
+                        $(this).removeClass('choice');
+                        $(this).addClass('choice');
+                    }
+                }
+            });
+            </textarea>
+        </div>
+        <script>
+            $('.radio').unbind().on('click',function(){
+                if($(this).attr('class').indexOf('unactive')<0){
+                    if(!$(this).data('state'))  $(this).data('state',0);
+                    if($(this).data('state')<1){
+                        $(this).data('state',1);
+                        $(this).removeClass('choice');
+                        $(this).addClass('choice');
+                    }
+                }
+            });
+        </script>
+    </div>
+
+    <div class="public_checkbox content">
+        <a name="public_checkbox"></a>
+        <h1 class="title">多选按钮类样式</h1>
+        <div class="summaryCon flex-con flex-con-start align-items-center flex-wrap"></div>
+        <h2 class="scdTitle">多选按钮：<code>.checkbox</code></h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <div class="checkbox margin-right-10 margin-bottom-10"><p>多选选项</p></div>
+            <div class="checkbox checked margin-right-10 margin-bottom-10" data-state="1"><p>多选选项-选择</p></div>
+            <div class="checkbox unactive margin-right-10 margin-bottom-10"><p>不可选多选选项</p></div>
+        </div>
+        <h2 class="scdTitle">多选按钮HTML实现：</h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <textarea class="border-solid border-radius-3 padding-10" style="width: 650px; height: 350px">
+                <div class="checkbox"><p>多选选项</p></div>
+            </textarea>
+        </div>
+        <h2 class="scdTitle">多选按钮Zepto-JS交互实现：</h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <textarea class="border-solid border-radius-3 padding-10" style="width: 650px; height: 350px">
+            $('.checkbox').unbind().on('click',function(){
+                if($(this).attr('class').indexOf('unactive')<0){
+                    if(!$(this).data('state'))  $(this).data('state',0);
+                    if($(this).data('state')<1){
+                        $(this).data('state',1)
+                    }else{
+                        $(this).data('state',0)
+                    }
+                }
+            });
+            </textarea>
+        </div>
+        <script>
+            $('.checkbox').unbind().on('click',function(){
+                if($(this).attr('class').indexOf('unactive')<0){
+                    if(!$(this).data('state'))  $(this).data('state',0);
+                    if($(this).data('state')<1){
+                        $(this).data('state',1);
+                        $(this).removeClass('checked');
+                        $(this).addClass('checked');
+                    }else{
+                        $(this).data('state',0);
+                        $(this).removeClass('checked');
+                    }
+                }
+            });
+        </script>
+    </div>
+
+    <div class="public_switch content">
+        <a name="public_switch"></a>
+        <h1 class="title">开关切换类样式</h1>
+        <div class="summaryCon flex-con flex-con-start align-items-center flex-wrap"></div>
+        <h2 class="scdTitle">开关切换：<code>.switch</code></h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <div class="switch margin-right-10 margin-bottom-10"></div>
+            <div class="switch switched margin-right-10 margin-bottom-10" data-state="1"></div>
+        </div>
+        <h2 class="scdTitle">开关切换HTML实现：</h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <textarea class="border-solid border-radius-3 padding-10" style="width: 650px; height: 350px">
+                <div class="switch"></div>
+            </textarea>
+        </div>
+        <h2 class="scdTitle">开关切换Zepto-JS交互实现：</h2>
+        <div class="summaryCon flex-con flex-con-start align-items-start flex-wrap">
+            <textarea class="border-solid border-radius-3 padding-10" style="width: 650px; height: 350px">
+            $('.switch').unbind().on('click',function(){
+                if($(this).attr('class').indexOf('unactive')<0){
+                    if(!$(this).data('state'))  $(this).data('state',0);
+                    if($(this).data('state')<1){
+                        $(this).data('state',1);
+                        $(this).removeClass('switched');
+                        $(this).addClass('switched');
+                    }else{
+                        $(this).data('state',0);
+                        $(this).removeClass('switched');
+                    }
+                }
+            });
+            </textarea>
+        </div>
+        <script>
+            $('.switch').unbind().on('click',function(){
+                if($(this).attr('class').indexOf('unactive')<0){
+                    if(!$(this).data('state'))  $(this).data('state',0);
+                    if($(this).data('state')<1){
+                        $(this).data('state',1);
+                        $(this).removeClass('switched');
+                        $(this).addClass('switched');
+                    }else{
+                        $(this).data('state',0);
+                        $(this).removeClass('switched');
+                    }
+                }
+            });
+        </script>
     </div>
 
     <div class="public_carousel content">

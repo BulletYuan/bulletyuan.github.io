@@ -1,31 +1,4 @@
 
-/* 基础背景颜色类样式 */
-.bg-black {background: #475058;}
-.bg-white {background: #fff;}
-.bg-light-gray {background: #f8f8f8;}
-.bg-dark-blue {background: #006fc0;}
-.bg-dark-blue {background: #006FC0;}
-.bg-light-blue {background: #2483d0;}
-.bg-gray-blue {background: #098ac0;}
-.bg-orange {background: #fe8000;}
-.bg-gray-orange {background: #FC4F0A;}
-.bg-green {background: #016839;}
-.bg-dark-red {background: #A81515;}
-
-/* 基础字体字色类样式 */
-.color-black {color: #333;}
-.color-light-black {color: #010101;}
-.color-dark-blue {color: #0875a3;}
-.color-blue {color: #006fc0}
-.color-dark-gray {color: #475058;}
-.color-light-gray {color: #6e6e6e;}
-.color-gray {color: #777;}
-.color-white {color: #fff;}
-.color-orange {color: #e98a02;}
-.color-gray-orange {color: #FC4F0A;}
-.color-green {color: #016839;}
-.color-dark-red {color: #A81515;}
-
 /* 基础背景图片伸缩样式 */
 .bg-img-no-repeat{ background-repeat: no-repeat;}
 .bg-img-repeat{ background-repeat: repeat;}
@@ -80,11 +53,14 @@
 .font-weight-bold {font-weight: bold}
 .font-weight-bolder {font-weight: bolder}
 .font-weight-normal {font-weight: normal}
-.gen-font-size(20);
-.gen-font-size(@n,@i:12) when (@i<=@n){
-    .font-size-@{i} {font-size: (@i)px;}
-    .gen-font-size(@n,(@i+1));
-}
+
+.font-size-12 {font-size: 12px;}
+.font-size-13 {font-size: 13px;}
+.font-size-14 {font-size: 14px;}
+.font-size-15 {font-size: 15px;}
+.font-size-16 {font-size: 16px;}
+.font-size-18 {font-size: 18px;}
+.font-size-20 {font-size: 20px;}
 
 /* 基础布局类样式 */
 .position-absolute {position: absolute}
@@ -172,13 +148,18 @@
 .padding-bottom-20 {padding-bottom: 20px;}
 
 /* 基础阴影样式 */
-.gen-shadow(10);
-.gen-shadow(@n,@i:3) when (@i<=@n){
-    .shadow-@{i},
-    .shadow-hover-@{i} {box-shadow: 0 0 (@i)px rgba(0, 0, 0, .3)}
-    .shadow-hover-@{i}:hover {box-shadow: none}
-    .gen-shadow(@n,(@i+1));
-}
+.shadow-3,
+.shadow-hover-3 {box-shadow: 0 0 3px rgba(0, 0, 0, .3)}
+.shadow-hover-3:hover {box-shadow: none}
+.shadow-5,
+.shadow-hover-5 {box-shadow: 0 0 5px rgba(0, 0, 0, .3)}
+.shadow-hover-5:hover {box-shadow: none}
+.shadow-8,
+.shadow-hover-8 {box-shadow: 0 0 8px rgba(0, 0, 0, .3)}
+.shadow-hover-8:hover {box-shadow: none}
+.shadow-10,
+.shadow-hover-10 {box-shadow: 0 0 10px rgba(0, 0, 0, .3)}
+.shadow-hover-10:hover {box-shadow: none}
 
 /* 基础边框样式 */
 .border-none{ border: none;}
@@ -192,11 +173,11 @@
 .border-left-right-solid {border-left-width: 1px; border-left-color:#ccc; border-left-style:solid;
     border-right-width: 1px; border-right-color:#ccc; border-right-style:solid;}
 
-.gen-border-width(5);
-.gen-border-width(@n,@i:1) when (@i<=@n){
-    .border-width-@{i} {border-width: (@i)px;}
-    .gen-border-width(@n,(@i+1));
-}
+.border-width-1 {border-width: 1px;}
+.border-width-2 {border-width: 2px;}
+.border-width-3 {border-width: 3px;}
+.border-width-4 {border-width: 4px;}
+.border-width-5 {border-width: 5px;}
 
 .border-success{ border-color: @success-color;}
 .border-error{ border-color: @error-color;}
@@ -205,13 +186,10 @@
 .border-active{ border-color: @active-color;}
 
 /* 基础圆角样式 */
-.gen-border-radius(10);
-.gen-border-radius(@n,@i:3) when (@i<=@n){
-    .border-radius-@{i}{
-        border-radius:(@i)px;
-    }
-    .gen-border-radius(@n,(@i+1));
-}
+.border-radius-3{border-radius:3px;}
+.border-radius-5{border-radius:5px;}
+.border-radius-8{border-radius:8px;}
+.border-radius-10{border-radius:10px;}
 .border-radius-20{ border-radius:20px; }
 .border-radius-50{ border-radius:50px; }
 .border-radius-999{ border-radius:999px; }
@@ -227,15 +205,15 @@
 .flex-nowrap {flex-wrap: nowrap}
 .flex-wrap {flex-wrap: wrap}
 
-.gen-flexs(9);
-.gen-flexs(@n,@i:1) when (@i<=@n){
-    .flex-@{i}{
-        -webkit-box-flex: @i;
-        -webkit-flex: @i;
-        flex: @i;
-    }
-    .gen-flexs(@n,(@i+1))
-}
+.flex-1{-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;}
+.flex-2{-webkit-box-flex: 2;-webkit-flex: 2;flex: 2;}
+.flex-3{-webkit-box-flex: 3;-webkit-flex: 3;flex: 3;}
+.flex-4{-webkit-box-flex: 4;-webkit-flex: 4;flex: 4;}
+.flex-5{-webkit-box-flex: 5;-webkit-flex: 5;flex: 5;}
+.flex-6{-webkit-box-flex: 6;-webkit-flex: 6;flex: 6;}
+.flex-7{-webkit-box-flex: 7;-webkit-flex: 7;flex: 7;}
+.flex-8{-webkit-box-flex: 8;-webkit-flex: 8;flex: 8;}
+.flex-9{-webkit-box-flex: 9;-webkit-flex: 9;flex: 9;}
 
 /* 基础弹性容器内容水平排列样式 */
 .flex-con-center {-ms-flex-pack:center;justify-content: center;}

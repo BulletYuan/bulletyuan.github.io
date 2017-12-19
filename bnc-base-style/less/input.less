@@ -1,0 +1,45 @@
+.input{
+    width: 240px;
+    .flex-con;
+    .flex-con-between;
+    .align-items-center;
+    .position-relative;
+    border: 1px #bfbfbf solid;
+    .border-radius-3;
+    transition: all .2s;
+    .bg-white;
+    padding: 8px 0;
+
+    & input{ padding: 0 10px; .flex-1;}
+    & .img{ width: 20px; height: 20px; margin-right: 10px; display: none}
+
+    &.active,
+    &:hover,
+    &:focus{
+        border-color: @theme-color;
+        box-shadow: 0 0 8px fade(@theme-color,30%);
+    }
+    &.error{
+        border-color: @error-color;
+        & .img{ display:block; .bg-img-center-auto; background-image: url(@error-o);}
+        &:hover{box-shadow: none;}
+    }
+    &.warn{
+        border-color: @warn-color;
+        & .img{ display:block; .bg-img-center-auto; background-image: url(@warn-o);}
+        &:hover{box-shadow: none;}
+    }
+    &.success{
+        border-color: @success-color;
+        & .img{ display:block; .bg-img-center-auto; background-image: url(@success-o);}
+        &:hover{box-shadow: none;}
+    }
+    &.unactive{
+        .bg-gray;
+        & input{ .bg-gray; .color-dark-gray-color;}
+        border-color: @light-dark-gray-color;
+        cursor: not-allowed;
+        & *{ cursor: not-allowed;}
+        &:hover{box-shadow: none;}
+    }
+}

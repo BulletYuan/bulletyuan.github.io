@@ -10,91 +10,49 @@
 /* 锐角三角形样式 */
 
 .triangle-up {
-    border-left-width: 10px;
-    border-left-color: transparent;
-    border-left-style: solid;
-    border-right-width: 10px;
-    border-right-color: transparent;
-    border-right-style: solid;
-    border-bottom-width: 20px;
-    border-bottom-color: white;
-    border-bottom-style: solid;
+    .triangle(0,@transprent,10px,@transprent,20px,@white-color,10px,@transprent);
 
-    &.bg-success{border-bottom-color:@success-color;}
-    &.bg-error{border-bottom-color:@error-color;}
-    &.bg-warn{border-bottom-color:@warn-color;}
-    &.bg-unactive{border-bottom-color:@unactive-color;}
-    &.bg-active{border-bottom-color:@active-color;}
+    &.bg-success{.triangle(0,@transprent,10px,@transprent,20px,@success-color,10px,@transprent);}
+    &.bg-error{.triangle(0,@transprent,10px,@transprent,20px,@error-color,10px,@transprent);}
+    &.bg-warn{.triangle(0,@transprent,10px,@transprent,20px,@warn-color,10px,@transprent);}
+    &.bg-unactive{.triangle(0,@transprent,10px,@transprent,20px,@unactive-color,10px,@transprent);}
+    &.bg-active{.triangle(0,@transprent,10px,@transprent,20px,@active-color,10px,@transprent);}
 }
 .triangle-down {
-    border-left-width: 10px;
-    border-left-color: transparent;
-    border-left-style: solid;
-    border-right-width: 10px;
-    border-right-color: transparent;
-    border-right-style: solid;
-    border-top-width: 20px;
-    border-top-color: white;
-    border-top-style: solid;
-    
-    &.bg-success{border-top-color:@success-color;}
-    &.bg-error{border-top-color:@error-color;}
-    &.bg-warn{border-top-color:@warn-color;}
-    &.bg-unactive{border-top-color:@unactive-color;}
-    &.bg-active{border-top-color:@active-color;}
+    .triangle(20px,@white-color,10px,@transprent,0,@transprent,10px,@transprent);
+
+    &.bg-success{.triangle(20px,@success-color,10px,@transprent,0,@transprent,10px,@transprent);}
+    &.bg-error{.triangle(20px,@error-color,10px,@transprent,0,@transprent,10px,@transprent);}
+    &.bg-warn{.triangle(20px,@warn-color,10px,@transprent,0,@transprent,10px,@transprent);}
+    &.bg-unactive{.triangle(20px,@unactive-color,10px,@transprent,0,@transprent,10px,@transprent);}
+    &.bg-active{.triangle(20px,@active-color,10px,@transprent,0,@transprent,10px,@transprent);}
 }
 .triangle-left {
-    border-right-width: 20px;
-    border-right-color: white;
-    border-right-style: solid;
-    border-bottom-width: 10px;
-    border-bottom-color: transparent;
-    border-bottom-style: solid;
-    border-top-width: 10px;
-    border-top-color: transparent;
-    border-top-style: solid;
-    
-    &.bg-success{border-right-color:@success-color;}
-    &.bg-error{border-right-color:@error-color;}
-    &.bg-warn{border-right-color:@warn-color;}
-    &.bg-unactive{border-right-color:@unactive-color;}
-    &.bg-active{border-right-color:@active-color;}
+    .triangle(10px,@transprent,20px,@white-color,10px,@transprent,0,@transprent);
+
+    &.bg-success{.triangle(10px,@transprent,20px,@success-color,10px,@transprent,0,@transprent);}
+    &.bg-error{.triangle(10px,@transprent,20px,@error-color,10px,@transprent,0,@transprent);}
+    &.bg-warn{.triangle(10px,@transprent,20px,@warn-color,10px,@transprent,0,@transprent);}
+    &.bg-unactive{.triangle(10px,@transprent,20px,@unactive-color,10px,@transprent,0,@transprent);}
+    &.bg-active{.triangle(10px,@transprent,20px,@active-color,10px,@transprent,0,@transprent);}
 }
 .triangle-right {
-    border-left-width: 20px;
-    border-left-color: white;
-    border-left-style: solid;
-    border-bottom-width: 10px;
-    border-bottom-color: transparent;
-    border-bottom-style: solid;
-    border-top-width: 10px;
-    border-top-color: transparent;
-    border-top-style: solid;
+    .triangle(10px,@transprent,0,@transprent,10px,@transprent,20px,@white-color);
 
-    &.bg-success{border-left-color:@success-color;}
-    &.bg-error{border-left-color:@error-color;}
-    &.bg-warn{border-left-color:@warn-color;}
-    &.bg-unactive{border-left-color:@unactive-color;}
-    &.bg-active{border-left-color:@active-color;}
+    &.bg-success{.triangle(10px,@transprent,0,@transprent,10px,@transprent,20px,@success-color);}
+    &.bg-error{.triangle(10px,@transprent,0,@transprent,10px,@transprent,20px,@error-color);}
+    &.bg-warn{.triangle(10px,@transprent,0,@transprent,10px,@transprent,20px,@warn-color);}
+    &.bg-unactive{.triangle(10px,@transprent,0,@transprent,10px,@transprent,20px,@unactive-color);}
+    &.bg-active{.triangle(10px,@transprent,0,@transprent,10px,@transprent,20px,@active-color);}
 }
 
 /* 直角三角形样式 */
 
 .triangle-top-left {
-    border-right-width: 20px;
-    border-right-color: transparent;
-    border-right-style: solid;
-    border-top-width: 20px;
-    border-top-color: white;
-    border-top-style: solid;
+    .triangle(20px,@white-color,20px,@transprent,0,@transprent,0,@transprent);
 }
 .triangle-top-right {
-    border-left-width: 20px;
-    border-left-color: transparent;
-    border-left-style: solid;
-    border-top-width: 20px;
-    border-top-color: white;
-    border-top-style: solid;
+    .triangle(20px,@white-color,0,@transprent,0,@transprent,20px,@transprent);
 }
 .triangle-top-left,
 .triangle-top-right{
@@ -105,20 +63,10 @@
     &.bg-active{border-top-color:@active-color;}
 }
 .triangle-bottom-left {
-    border-right-width: 20px;
-    border-right-color: transparent;
-    border-right-style: solid;
-    border-bottom-width: 20px;
-    border-bottom-color: white;
-    border-bottom-style: solid;
+    .triangle(0,@transprent,20px,@transprent,20px,@white-color,0,@transprent);
 }
 .triangle-bottom-right {
-    border-left-width: 20px;
-    border-left-color: transparent;
-    border-left-style: solid;
-    border-bottom-width: 20px;
-    border-bottom-color: white;
-    border-bottom-style: solid;
+    .triangle(0,@transprent,0,@transprent,20px,@white-color,20px,@transprent);
 }
 .triangle-bottom-left,
 .triangle-bottom-right{

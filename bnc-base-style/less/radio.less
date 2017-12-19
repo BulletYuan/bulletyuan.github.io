@@ -1,0 +1,18 @@
+.radio{
+    .flex-con;
+    .flex-con-start;
+    .align-items-center;
+    .font-size-14;
+    color: @dark-gray-color;
+    padding-left: 25px;
+    .bg-img-left-auto;
+    background-image: url(@unradio);
+
+    & *,&{ .cursor-pointer;}
+    &.choice{background-image: url(@radio);}
+    &.unactive{
+        color: @light-dark-gray-color;
+        & *,&{ cursor: not-allowed;}
+        &.choice{background-image: url(@unradio);}
+    }
+}
