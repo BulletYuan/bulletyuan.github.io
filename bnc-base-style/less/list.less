@@ -8,26 +8,22 @@
 }
 
 .listCon.listCon-margin-0>ul>li {.margin-0;}
-.gen-listCon-left-li(20);
-.gen-listCon-left-li(@n,@i:5) when (@i<=@n){
-    .listCon.listCon-margin-left-@{i}>ul>li {margin-left:(@i)px;}
-    .gen-listCon-left-li(@n,@i+5);
-}
-.gen-listCon-right-li(20);
-.gen-listCon-right-li(@n,@i:5) when (@i<=@n){
-    .listCon.listCon-margin-right-@{i}>ul>li {margin-right:(@i)px;}
-    .gen-listCon-right-li(@n,@i+5);
-}
-.gen-listCon-top-li(20);
-.gen-listCon-top-li(@n,@i:5) when (@i<=@n){
-    .listCon.listCon-margin-top-@{i}>ul>li {margin-top:(@i)px;}
-    .gen-listCon-top-li(@n,@i+5);
-}
-.gen-listCon-bottom-li(20);
-.gen-listCon-bottom-li(@n,@i:5) when (@i<=@n){
-    .listCon.listCon-margin-bottom-@{i}>ul>li {margin-bottom:(@i)px;}
-    .gen-listCon-bottom-li(@n,@i+5);
-}
+.listCon.listCon-margin-left-5>ul>li {margin-left:5px;}
+.listCon.listCon-margin-left-10>ul>li {margin-left:10px;}
+.listCon.listCon-margin-left-15>ul>li {margin-left:15px;}
+.listCon.listCon-margin-left-20>ul>li {margin-left:20px;}
+.listCon.listCon-margin-right-5>ul>li {margin-right:5px;}
+.listCon.listCon-margin-right-10>ul>li {margin-right:10px;}
+.listCon.listCon-margin-right-15>ul>li {margin-right:15px;}
+.listCon.listCon-margin-right-20>ul>li {margin-right:20px;}
+.listCon.listCon-margin-top-5>ul>li {margin-top:5px;}
+.listCon.listCon-margin-top-10>ul>li {margin-top:10px;}
+.listCon.listCon-margin-top-15>ul>li {margin-top:15px;}
+.listCon.listCon-margin-top-20>ul>li {margin-top:20px;}
+.listCon.listCon-margin-bottom-5>ul>li {margin-bottom:5px;}
+.listCon.listCon-margin-bottom-10>ul>li {margin-bottom:10px;}
+.listCon.listCon-margin-bottom-15>ul>li {margin-bottom:15px;}
+.listCon.listCon-margin-bottom-20>ul>li {margin-bottom:20px;}
 
 .listCon-end-row,
 .listCon-end-1col,
@@ -41,6 +37,8 @@
     .listCon.listCon-end-@{i}col>ul>li:nth-child(@{i}n) {.margin-right-0;}
     .gen-listCon-end-col(@n,@i+1);
 }
+//.listCon.listCon-end-1col>ul>li:nth-child(n),
+//.listCon.listCon-end-2col>ul>li:nth-child(2n) {.margin-right-0;}
 
 
 /* 文字列表样式 */
