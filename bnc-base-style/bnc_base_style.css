@@ -2295,7 +2295,7 @@ input[type="button"].btn-line.btn-active.unactive,
 }
 .carouselCon > .topBar.text-pot .textBar,
 .carouselCon > .bottomBar.text-pot .textBar {
-  margin-right: 20px;
+  margin-left: 20px;
   text-align: left;
 }
 .carouselCon > .leftBar,
@@ -2567,4 +2567,3 @@ input[type="button"].btn-line.btn-active.unactive,
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-/*# sourceMappingURL=bnc_base_style.css.map */
