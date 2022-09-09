@@ -557,6 +557,42 @@ window.Bullet['易经'] = {
     const [ben, zhi] = g;
     const [Ben, Zhi] = [G[ben], G[zhi]];
     if (!Ben || !Zhi) return;
-    console.log('本卦', `${Ben.name}-${Ben.label}\n${Ben.desc}`, '\n之卦', `${Zhi.name}-${Zhi.label}\n${Zhi.desc}`);
+    const benArr = ben.split('');
+    let hu = new Array(6).fill(0);
+    benArr.forEach((c, i) => {
+      if ([2, 3, 4].includes(i)) {
+        // 本卦中的第三、四、五爻，拿出来作为互卦的上卦
+        hu[i - 2] = c;
+      }
+      if ([1, 2, 3].includes(i)) {
+        // 本卦的第二、三、四爻
+        hu[i + 2] = c;
+      }
+    });
+    hu = hu.join('');
+    const Hu = G[hu];
+    console.log('🚀 ~ file: Untitled-1 ~ line 573 ~ hu', hu);
+    const cuo = benArr.map((v) => `${Number(!Number(v))}`).join('');
+    const Cuo = G[cuo];
+    console.log('🚀 ~ file: Untitled-1 ~ line 576 ~ cuo', cuo);
+    const zong = [...(benArr.slice(-3) || []), ...(benArr.slice(0, 3) || [])].join('');
+    const Zong = G[zong];
+    console.log('🚀 ~ file: Untitled-1 ~ line 576 ~ zong', zong);
+    console.log(
+      '\n本卦：代表事物的原本\n',
+      `${Ben?.name}-${Ben?.label}\n${Ben?.desc}`,
+      '\n',
+      '\n互卦：代表事物的变化过程\n',
+      `${Hu?.name}-${Hu?.label}\n${Hu?.desc}`,
+      '\n',
+      '\n错卦：代表事物的对立面\n',
+      `${Cuo?.name}-${Cuo?.label}\n${Cuo?.desc}`,
+      '\n',
+      '\n综卦：代表事物的另一角度\n',
+      `${Zong?.name}-${Zong?.label}\n${Zong?.desc}`,
+      '\n',
+      '\n之卦：代表事物变化的结果\n',
+      `${Zhi?.name}-${Zhi?.label}\n${Zhi?.desc}`
+    );
   },
 };
