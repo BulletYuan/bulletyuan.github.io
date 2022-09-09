@@ -85,7 +85,7 @@ window.Bullet['易经'] = {
     const result = this.J(c1, c2, c3);
     return result;
   },
-  卜卦(type = 1, isLeft = 0, counts) {
+  卜卦(type = 1, isLeft = 0, counts = []) {
     const G = {
       111111: {
         name: '乾',
